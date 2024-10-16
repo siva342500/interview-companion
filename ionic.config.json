@@ -1,0 +1,7 @@
+{
+  "name": "interview_campaign",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
