@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Confirmed Companions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="companions.length > 0">
+    <ion-item *ngFor="let companion of companions">
+      <ion-label>
+        <h2>{{ companion.name }}</h2>
+        <p>Mobile: {{ companion.phone }}</p>
+      </ion-label>
+      <ion-button (click)="reserveCompanion(companion.id)" slot="end">Reserve</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-text *ngIf="companions.length === 0" class="ion-text-center">
+    <p>No confirmed companions available.</p>
+  </ion-text>
+</ion-content>

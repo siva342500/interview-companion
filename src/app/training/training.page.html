@@ -1,0 +1,60 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>training</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">training</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Training</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Reserve Companion for Training</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Select Technology</ion-label>
+        <ion-select [(ngModel)]="selectedTechnology">
+          <ion-select-option value="angular">Angular</ion-select-option>
+          <ion-select-option value="react">React</ion-select-option>
+          <!-- Add more technologies if needed -->
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Select Date</ion-label>
+        <input
+          type="date"
+          display-format="MM/DD/YYYY"
+          [(ngModel)]="selectedDate"
+        />
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Select Time</ion-label>
+        <input
+          type="time"
+          display-format="h:mm A"
+          picker-format="h:mm A"
+          [(ngModel)]="selectedTime"
+        />
+      </ion-item>
+
+      <ion-button expand="full" (click)="submitReservation()"
+        >Reserve</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ion-content>

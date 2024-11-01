@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reserve Companion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <h1 class="header-title" style="font-size: 20px">
+    Reserve Companion for Interview
+  </h1>
+
+  <!-- Technology Selection -->
+  <div>
+    <ion-item>
+      <ion-label style="margin-left: 20px">Select Technology</ion-label>
+      <ion-select
+        [(ngModel)]="selectedTechnology"
+        (ionChange)="fetchExperts()"  
+        required
+        style="margin-left: 20px"
+      >
+        <ion-select-option
+          *ngFor="let tech of technologies"
+          [value]="tech"
+          class="interview1"
+          >{{ tech }}</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <!-- Interview Date -->
+  <div class="input-container">
+    <ion-item>
+      <ion-label class="interview">Interview Date</ion-label>
+      <ion-input
+        type="date"
+        [(ngModel)]="interviewDate"
+        required
+        class="interview"
+      ></ion-input>
+    </ion-item>
+  </div>
+
+  <!-- Interview Time -->
+  <div class="input-container">
+    <ion-item>
+      <ion-label class="interview">Interview Time</ion-label>
+      <ion-input
+        type="time"
+        [(ngModel)]="interviewTime"
+        required
+        class="interview"
+      ></ion-input>
+    </ion-item>
+  </div>
+
+  <!-- Select Time Zone -->
+  <div class="input-container">
+    <ion-item>
+      <ion-label>Select Time Zone</ion-label>
+      <ion-select [(ngModel)]="time_zone" required>
+        <ion-select-option value="IST">IST</ion-select-option>
+        <ion-select-option value="EDT">EDT</ion-select-option>
+        <ion-select-option value="BST">BST</ion-select-option>
+        <ion-select-option value="GST">GST</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <!-- Submit Request Button -->
+  <ion-button expand="full" class="custom-button" (click)="submitRequest()"
+    >Submit Request</ion-button
+  >
+
+  <!-- Show status message and Available Companions if request is accepted -->
+  <div *ngIf="statusMessage" class="status-message">
+    <p>{{ statusMessage }}</p>
+  </div>
+
+  <div *ngIf="acceptedCompanions.length > 0">
+    <h2 style="margin-left: 10px">Available Companions</h2>
+   <ion-list>
+  <ion-item *ngFor="let companion of acceptedCompanions">
+    {{ companion.name}}
+    <ion-button
+      slot="end"
+      class="custom-button"
+     
+      >Reserve</ion-button
+    >
+  </ion-item>
+</ion-list>
+  </div>
+</ion-content>

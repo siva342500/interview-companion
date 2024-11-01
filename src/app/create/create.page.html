@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enter Your Mobile Number</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="input-container">
+      <div class="country-mobile-container">
+        <!-- Country Code Selector -->
+        <ion-item class="country-code-item">
+          <ion-select
+            placeholder="Country Code"
+            [(ngModel)]="selectedCountryCode"
+            (ionChange)="onCountrySelected()"
+            class="country-code-select"
+          >
+            <ion-select-option value="+1">🇺🇸 +1 USA</ion-select-option>
+            <ion-select-option value="+91">🇮🇳 +91 India</ion-select-option>
+            <ion-select-option value="+44">🇬🇧 +44 UK</ion-select-option>
+            <ion-select-option value="+61">🇦🇺 +61 Australia</ion-select-option>
+            <ion-select-option value="+81">🇯🇵 +81 Japan</ion-select-option>
+            <ion-select-option value="+49">🇩🇪 +49 Germany</ion-select-option>
+            <ion-select-option value="+33">🇫🇷 +33 France</ion-select-option>
+            <ion-select-option value="+39">🇮🇹 +39 Italy</ion-select-option>
+            <!-- Add more countries as needed -->
+          </ion-select>
+        </ion-item>
+
+        <!-- Mobile Number Input -->
+        <ion-item class="mobile-number-item">
+          <ion-input
+            type="tel"
+            [(ngModel)]="mobileNumber"
+            placeholder="Enter your mobile number"
+            class="mobile-number-input"
+          >
+            <ion-icon name="person" slot="end" class="input-icon"></ion-icon>
+            <ion-icon name="key" slot="end" class="input-icon"></ion-icon>
+          </ion-input>
+        </ion-item>
+      </div>
+    </div>
+
+    <!-- Send OTP Button -->
+    <ion-button
+      expand="block"
+      *ngIf="mobileNumber"
+      (click)="sendOtp()"
+      class="tech"
+    >
+      Continue
+    </ion-button>
+  </div>
+
+  <p class="consent-text">
+    By proceeding, you consent to get calls, WhatsApp or SMS/RCS messages,
+    including by automated dialer, from IC and its affiliates to the number
+    provided. Text "STOP" to 80665 to opt out.
+  </p>
+</ion-content>
+
+<div class="button-container">
+  <ion-button routerLink="/home" class="circle-button black-background">
+    <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+  </ion-button>
+</div>

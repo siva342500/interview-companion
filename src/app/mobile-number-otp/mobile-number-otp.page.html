@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Welcome back</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Welcome back</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <p class="mobile">
+      Enter the 4-digit code sent to you at:
+      <strong>{{ mobileNumber }}</strong>
+    </p>
+    <div class="change-mobile-number">
+      <span
+        class="legal-link"
+        (click)="goToChangeMobileNumber()"
+        style="cursor: pointer; color: rgb(8, 8, 8)"
+      >
+        Changed your mobile number?
+      </span>
+    </div>
+    <div class="otp-inputs">
+      <ion-item *ngFor="let otpDigit of otp; let i = index" lines="none">
+        <ion-input
+          type="tel"
+          maxlength="1"
+          [(ngModel)]="otp[i]"
+          (ionInput)="onOtpInput(i)"
+          class="otp-input"
+          #otpInput
+        ></ion-input>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
+
+<div class="button-container">
+  <ion-button (click)="verifyOtp()" class="circle-button">
+    <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+  </ion-button>
+</div>

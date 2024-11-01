@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Contact Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contact Us To Help</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Subject</ion-label>
+        <ion-input #subjectInput placeholder="Enter subject"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Message</ion-label>
+        <ion-textarea
+          #messageInput
+          placeholder="Enter your message"
+        ></ion-textarea>
+      </ion-item>
+      <ion-button
+        expand="full"
+        (click)="submitContactForm(subjectInput.value!, messageInput.value!)"
+        class="custom-button"
+        >Submit</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ion-content>

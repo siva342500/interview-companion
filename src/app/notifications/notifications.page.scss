@@ -1,0 +1,37 @@
+/* Style for the table header */
+.header-row {
+  background-color: rgb(227, 225, 225);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style for each request row */
+.request-row {
+  background-color: #f0f0f0; /* Set grey background */
+  margin-top: 3px; /* Space between each row */
+  padding: 5px;
+  color: rgb(11, 9, 9);
+  cursor: pointer; /* Make it behave like a clickable button */
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Full row clickable */
+.request-row ion-col {
+  display: flex;
+  justify-content: center; /* Center content inside ion-col */
+  align-items: center; /* Center content vertically */
+}
+
+
+/* Logo styling */
+.logo {
+  height: 60px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}

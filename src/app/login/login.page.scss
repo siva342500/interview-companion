@@ -1,0 +1,58 @@
+.footer-buttons {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons evenly */
+  align-items: center; /* Center items vertically */
+  padding: 5px 0; /* Add some padding */
+}
+
+.footer-buttons ion-button {
+  flex-direction: column; /* Stack icon and label vertically */
+  align-items: center; /* Center items */
+}
+
+.footer-buttons ion-label {
+  font-size: 10px; /* Adjust label size as needed */
+}
+ion-card img {
+  width: 100%;
+  height: auto;
+}
+
+ion-button.custom-button {
+  background-color: black !important; /* Ensures black background */
+  color: white !important; /* Change text color to white for contrast */
+  --background: black; /* Ionic custom property for background */
+  --color: white; /* Ionic custom property for text color */
+}
+.logo {
+  height: 60px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+ion-button.custom-button {
+  background-color: black !important; /* Ensures black background */
+  color: white !important; /* Change text color to white for contrast */
+  --background: black; /* Ionic custom property for background */
+  --color: white; /* Ionic custom property for text color */
+}
+/* src/global.scss */
+ion-app {
+  --ion-background-color: #ffffff; /* White background */
+  --ion-text-color: #000000; /* Black text */
+}
+
+ion-content {
+  --background: #ffffff; /* White background for ion-content */
+  color: #000000; /* Black text color */
+}
+
+.custom-button {
+  color: #ffffff; /* Change button text color */
+  background-color: #000000; /* Change button background color */
+}
+/* src/app/account/account.page.scss */
+ion-button {
+  --background: #f0f0f0; /* White background */
+  --color: #000000; /* Black text */
+  --border-color: #000000; /* Optional: border color */
+  --padding: 600px;
+}

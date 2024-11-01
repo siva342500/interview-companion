@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Wallet</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wallet-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Your Amount</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h2 class="cash-amount">${{ balance.toFixed(2) }}</h2>
+        <!-- Display balance -->
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="full" class="custom-button" (click)="addFunds()"
+      >Add Funds</ion-button
+    >
+  </div>
+</ion-content>

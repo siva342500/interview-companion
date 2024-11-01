@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Account</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Account Options</ion-card-title>
+    </ion-card-header> -->
+    <ion-card-content>
+      <ion-button routerLink="/personal-details" expand="full"
+        >Personal Details</ion-button
+      >
+      <ion-button routerLink="/payment-method" expand="full"
+        >Payment Method
+      </ion-button>
+       <ion-button routerLink="/payment-details" expand="full">Payment Details</ion-button>
+      <ion-button routerLink="/wallet" expand="full">Wallet</ion-button>
+       <ion-button routerLink="/available-companions" expand="full">Confirmed Companions</ion-button>
+      <ion-button routerLink="/refer-afriend" expand="full"
+        >Refer a Friend</ion-button
+      >
+      <ion-button routerLink="/contact-us" expand="full">Contact Us</ion-button>
+      <!-- <ion-button routerLink="/legal" expand="full">Legal</ion-button> -->
+      <ion-text class="ion-text-center">
+        <a routerLink="/legal" class="legal-link">Terms and Conditions</a>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="goToHome()" class="custom-button"
+    >Logout</ion-button
+  >
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="goToLogin()">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Notifications</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="activity" (click)="goToActivity()">
+      <ion-icon name="pulse-outline"></ion-icon>
+      <ion-label>Activity</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account" (click)="goToAccount()">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

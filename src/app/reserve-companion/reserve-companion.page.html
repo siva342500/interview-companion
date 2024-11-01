@@ -1,0 +1,54 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reserve Companion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title
+        >Reservation for {{ serviceType | titlecase }}</ion-card-title
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item
+        *ngIf="serviceType === 'training' || serviceType === 'codingTest'"
+      >
+        <ion-label>Select Technology</ion-label>
+        <ion-select>
+          <ion-select-option value="angular">Angular</ion-select-option>
+          <ion-select-option value="react">React</ion-select-option>
+          <!-- Add more technologies -->
+        </ion-select>
+      </ion-item>
+
+      <ion-item
+        *ngIf="serviceType === 'interview' || serviceType === 'mockInterview'"
+      >
+        <ion-label>Select Date</ion-label>
+        <ion-datetime
+          display-format="MM/DD/YYYY"
+          [(ngModel)]="selectedDate"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-item
+        *ngIf="serviceType === 'interview' || serviceType === 'mockInterview'"
+      >
+        <ion-label>Select Time</ion-label>
+        <ion-datetime
+          display-format="h:mm A"
+          picker-format="h:mm A"
+          [(ngModel)]="selectedTime"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-button expand="full" (click)="submitReservation()"
+        >Reserve</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ion-content>

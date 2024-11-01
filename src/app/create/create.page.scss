@@ -1,0 +1,104 @@
+.container {
+  padding: 16px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.country-mobile-container {
+  display: flex; /* Align items in one line */
+  align-items: center; /* Center items vertically */
+}
+
+.country-code-item,
+.mobile-number-item {
+  border-radius: 8px; /* Rounded corners for the boxes */
+  border: 1px solid var(--ion-color-medium); /* Border color */
+  margin-right: 12px; /* Space between items */
+  --background: #f0f0f0 !important; /* Background color */
+}
+
+.country-code-select {
+  --padding-start: 16px; /* Padding for the select box */
+  --padding-end: 16px;
+}
+
+.mobile-number-input {
+  --padding-start: 16px; /* Padding for the input box */
+  --padding-end: 16px;
+  flex: 1; /* Make the input take up the remaining space */
+}
+
+.custom-button {
+  margin-top: 10px; /* Space above the button */
+  background-color: black !important; /* Ensure black background */
+  color: white !important; /* Change text color to white for contrast */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px; /* Space above the button container */
+}
+
+.black-background {
+  background-color: #f0f0f0 !important; /* Set button background color to black */
+  color: rgb(
+    18,
+    15,
+    15
+  ) !important; /* Change text/icon color to white for contrast */
+}
+
+.circle-button {
+  --background: #f0f0f0; /* Ensure circular button has black background */
+  color: rgb(22, 20, 20); /* Ensure the icon color is white */
+}
+.circle-button {
+  --background: #f0f0f0; /* Ensure circular button has black background */
+  color: rgb(8, 8, 8); /* Ensure the icon color is white */
+  position: absolute; /* Position the button absolutely */
+  bottom: 20px; /* Adjust top position */
+  left: 20px; /* Adjust left position */
+}
+.tech {
+  --background: black; /* Ensure circular button has black background */
+  color: white;
+  background-color: black !important; /* Set button background color to black */
+  color: white !important;
+}
+.or-divider {
+  text-align: center; /* Center the OR text */
+  margin: 10px 0; /* Space around the divider */
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--ion-color-medium); /* Line color */
+  width: 40%; /* Line width */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  padding-top: 30px;
+}
+
+.or-divider::before {
+  left: 0; /* Position the left line */
+  padding-top: 30px;
+}
+
+.or-divider::after {
+  right: 0; /* Position the right line */
+  padding-top: 30px;
+}
+.consent-text {
+  color: black; /* Set text color to black */
+  margin: 0 16px; /* Add left and right margin for spacing */
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: left; /* Center the text */
+  margin-top: 150px;
+}

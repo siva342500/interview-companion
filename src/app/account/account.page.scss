@@ -1,0 +1,45 @@
+/* In your global styles or component stylesheet */
+ion-button.custom-button {
+  background-color: black !important; /* Ensures black background */
+  color: white !important; /* Change text color to white for contrast */
+  --background: black; /* Ionic custom property for background */
+  --color: white; /* Ionic custom property for text color */
+}
+/* src/global.scss */
+ion-app {
+  --ion-background-color: #ffffff; /* White background */
+  --ion-text-color: #000000; /* Black text */
+}
+
+ion-content {
+  --background: #ffffff; /* White background for ion-content */
+  color: #000000; /* Black text color */
+}
+
+.custom-button {
+  color: #ffffff; /* Change button text color */
+  background-color: #000000; /* Change button background color */
+}
+/* src/app/account/account.page.scss */
+ion-button {
+  --background: #f0f0f0; /* White background */
+  --color: #000000; /* Black text */
+  --border-color: #000000; /* Optional: border color */
+  --padding: 600px;
+}
+.legal-link {
+  color: black; /* Set the text color to black */
+  text-decoration: underline; /* Remove underline */
+  font-size: 10px;
+  display: block;
+  text-align: center; /* Adjust the size as needed */
+  margin-top: 20px;
+}
+.logo {
+  height: 60px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+.custom-button {
+  --background: black; /* Change the background color to black */
+  --color: white; /* Optional: Change text color to white for better contrast */
+}

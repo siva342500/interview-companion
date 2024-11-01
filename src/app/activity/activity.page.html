@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Activity</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Activity</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Your Active Reservations</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ng-container
+        *ngIf="activeReservations.length > 0; else noActiveReservations"
+      >
+        <ion-list>
+          <ion-item *ngFor="let reservation of activeReservations">
+            {{ reservation.type }} - {{ reservation.date }} at {{
+            reservation.time }}
+          </ion-item>
+        </ion-list>
+      </ng-container>
+      <ng-template #noActiveReservations>
+        <p>You've no active reservations yet.</p>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Reservation History</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ng-container *ngIf="reservationHistory.length > 0; else noHistory">
+        <ion-list>
+          <ion-item *ngFor="let reservation of reservationHistory">
+            {{ reservation.type }} - {{ reservation.date }} at {{
+            reservation.time }}
+          </ion-item>
+        </ion-list>
+      </ng-container>
+      <ng-template #noHistory>
+        <p>You've no reservations yet.</p>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="goToLogin()">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Notifications</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="activity" (click)="goToActivity()">
+      <ion-icon name="pulse-outline"></ion-icon>
+      <ion-label>Activity</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account" (click)="goToAccount()">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

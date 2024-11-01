@@ -1,0 +1,77 @@
+.content {
+  padding: 16px; /* Add padding for better spacing */
+}
+
+.header-title {
+  margin-bottom: 16px; /* Space below the title */
+  margin-left: 20px !important;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center; /* Center align input fields */
+  margin-bottom: 16px; /* Space between items */
+  width: 100%; /* Full width */
+}
+
+ion-item {
+  width: 90%; /* Control the width of the ion-item */
+}
+
+.custom-button {
+  --background: black; /* Black background */
+  --color: white; /* White text */
+  margin-top: 16px; /* Add space above the button */
+}
+
+.status-message {
+  margin-top: 16px; /* Space above status message */
+  text-align: center; /* Center align status message */
+}
+/*----------------------
+
+.content {
+  padding: 16px; /* Add padding for better spacing */
+// }
+
+.header-title {
+  margin-bottom: 24px; /* Space below the title */
+  text-align: center; /* Center the title */
+}
+
+.input-container {
+  margin-bottom: 16px; /* Space between items */
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between; /* Space out label and input */
+  align-items: center; /* Center items vertically */
+}
+
+ion-label.interview {
+  flex-basis: 40%; /* Control the width of the label */
+  text-align: left; /* Align label to the left */
+}
+
+ion-input.interview,
+ion-select.interview {
+  flex-basis: 100%; /* Control the width of the input/select */
+  text-align: center;
+  /* Center the input text */
+  // margin-left: 10px;
+}
+
+.custom-button {
+  --background: black; /* Black background */
+  --color: white; /* White text */
+  margin-top: 16px; /* Add space above the button */
+}
+
+.status-message {
+  margin-top: 16px; /* Space above status message */
+  text-align: center; /* Center align status message */
+}
+ion-input.interview1 {
+  margin-left: 20px;
+}

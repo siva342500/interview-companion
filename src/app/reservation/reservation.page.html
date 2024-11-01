@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reserve Companion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Reserve Companion for Interview ($100)</h1>
+
+  <ion-item>
+    <ion-label>Select Interview Date:</ion-label>
+    <ion-datetime
+      [(ngModel)]="interviewDate"
+      displayFormat="MMM DD, YYYY"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Select Interview Time:</ion-label>
+    <ion-datetime
+      [(ngModel)]="interviewTime"
+      displayFormat="HH:mm"
+      pickerFormat="HH:mm"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Select Time Zone:</ion-label>
+    <ion-select [(ngModel)]="timeZone">
+      <ion-select-option value="UTC-5">UTC-5</ion-select-option>
+      <ion-select-option value="UTC-6">UTC-6</ion-select-option>
+      <ion-select-option value="UTC-7">UTC-7</ion-select-option>
+      <!-- Add more time zones as needed -->
+    </ion-select>
+  </ion-item>
+
+  <h2>Available Companions</h2>
+  <ion-list>
+    <ion-item *ngFor="let companion of companions">
+      {{ companion }}
+      <ion-button slot="end" (click)="reserve(companion)">Reserve</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="statusMessage">
+    <p>{{ statusMessage }}</p>
+    <ion-button (click)="navigateToPayment()">Make Payment</ion-button>
+  </div>
+</ion-content>

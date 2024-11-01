@@ -2,8 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// src/environments/environment.prod.ts
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://localhost:8000/api', // Your production API URL
+  razorpayKeyId: 'YOUR_RAZORPAY_KEY_ID', // Your Razorpay Key ID for production
 };
 
 /*

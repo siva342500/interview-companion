@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 style="margin-left: 20px">Suggestions</h1>
+
+  <!-- Card for Enroll Interview Companion -->
+  <ion-card>
+    <ion-card-content>
+      <ion-button
+        class="suggestion-item"
+        (click)="goToInterview()"
+        expand="full"
+      >
+        Reserve Companion for Interview 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Coming Soon section for other services -->
+  <h1 style="margin-left: 20px">Coming Soon</h1>
+  <ion-card>
+    <ion-card-content>
+      <ion-button expand="full" routerLink="/training" disabled>
+        Reserve Companion for Training
+      </ion-button>
+
+      <ion-button expand="full" routerLink="/resume-prep" disabled>
+        Reserve Companion for Resume Prep
+      </ion-button>
+
+      <ion-button expand="full" routerLink="/mock-interview" disabled>
+        Reserve Companion for Mock Interview 
+      </ion-button>
+
+      <ion-button expand="full" routerLink="/coding-test" disabled>
+        Reserve Companion for Coding Test
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <h1 style="margin-left: 20px">Upcoming services</h1>
+  <ion-card>
+    <ion-card-content>
+      <ion-button expand="full"> Java Training </ion-button>
+
+      <ion-button expand="full"> Python Training </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="goToLogin()">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Notifications</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="activity" (click)="goToActivity()">
+      <ion-icon name="pulse-outline"></ion-icon>
+      <ion-label>Activity</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account" (click)="goToAccount()">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

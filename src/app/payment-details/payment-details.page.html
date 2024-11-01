@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Payment Details</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let payment of payments">
+    <ion-card-header>
+      <ion-card-title>Payment ID: {{ payment.id }}</ion-card-title>
+      <ion-card-subtitle>Status: {{ payment.status }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Amount: {{ payment.amount }} {{ payment.currency }}</p>
+      <p>Order ID: {{ payment.razorpay_order_id }}</p>
+      <p>Created At: {{ payment.created_at | date }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" (click)="goBack()" class="custom-button">Back to Account</ion-button>
+</ion-footer>

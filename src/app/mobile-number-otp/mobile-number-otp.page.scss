@@ -1,0 +1,89 @@
+.otp-inputs {
+  display: flex; /* Arrange inputs in a row */
+  justify-content: flex-start; /* Align inputs to the left */
+  margin-top: 40px;
+   /* Align inputs to the left */
+   margin: auto focus;
+}
+
+.otp-input {
+  background-color: #f0f0f0; /* Grey background */
+  border: none; /* Remove border */
+  text-align: center; /* Center text inside the input */
+  font-size: 20px; /* Smaller font size */
+  width: 40px; /* Fixed width for smaller boxes */
+  height: 40px; /* Fixed height for smaller boxes */
+  margin: 0; /* No margin to remove space between boxes */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+.otp-input:last-child {
+  margin-right: 0; /* Remove margin for the last input */
+}
+
+.legal-link {
+  color: black; /* Set the text color to black */
+  text-decoration: underline; /* Add underline */
+  font-size: 16px;
+  display: block;
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Add left margin */
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+  margin-bottom: 20px; /* Add some space above the button */
+  margin-right: 20px;
+}
+
+.circle-button {
+  --width: 30px; /* Adjust width */
+  --height: 50px; /* Adjust height */
+  --border-radius: 50%; /* Makes it circular */
+  --background: #f0f0f0; /* Background color */
+  --color: rgb(17, 15, 15); /* Icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-button ion-icon {
+  font-size: 24px; /* Adjust icon size */
+  color: rgb(11, 10, 10); /* Make the arrow icon white */
+}
+
+.mobile {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Remove the default line from ion-item */
+ion-item {
+  --ion-item-background: transparent; /* Make background transparent */
+  --ion-item-border-color: transparent; /* Remove border */
+  --ion-item-border-width: 0; /* No border width */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+.container {
+  min-height: 300px; /* Adjust this value to ensure content stays in place */
+  padding-bottom: 20px; /* Prevent elements from moving when the keyboard opens */
+  position: relative;
+}
+.otp-input:last-child {
+  margin-right: 0; /* No margin for the last input */
+}
+ion-item {
+  --ion-item-background: transparent;
+  --ion-item-border-color: transparent;
+  --ion-item-border-width: 0;
+  --padding-start: 0px;
+  --padding-end: 0px;
+  // --inner-padding-end: 0px;
+  // --inner-padding-start: 0px;
+  margin: 0;
+  /* Remove margin */
+  margin-left: 10px;
+}

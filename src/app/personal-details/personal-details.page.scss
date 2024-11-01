@@ -1,0 +1,43 @@
+.custom-button {
+  --background: black; /* Change the background color to black */
+  --color: white; /* Optional: Change text color to white for better contrast */
+}
+.logo {
+  height: 60px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+.content {
+  padding: 16px; /* Add padding for better spacing */
+}
+
+.input-container {
+  margin-bottom: 16px; /* Space between items */
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between; /* Space out label and input */
+  align-items: center; /* Center items vertically */
+}
+
+ion-label {
+  flex-basis: 40%; /* Control the width of the label */
+  text-align: left; /* Align label to the left */
+}
+
+ion-input {
+  text-align: left; /* Center the input text */
+  margin-left: 30px !important;
+}
+
+.custom-button {
+  --background: black; /* Black background */
+  --color: white; /* White text */
+  margin-top: 16px; /* Add space above the button */
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 20px;
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Refer a Friends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Refer a Friend</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Your friend mobile number</ion-label>
+        <ion-input
+          [(ngModel)]="referFriendMessage"
+          placeholder="Enter Friend mobile number"
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="full" (click)="referFriend()" class="custom-button"
+        >Submit</ion-button
+      >
+      <!-- <p>Refer a friend to get $5!</p> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Requests History</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/wings5.png" alt="Logo" class="logo" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <!-- Grid for displaying requests as buttons with grey background -->
+      <ion-grid>
+        <!-- Header row with titles -->
+        <ion-row class="header-row">
+          <ion-col size="4"><strong>Request Type</strong></ion-col>
+          <ion-col size="4"><strong>Date</strong></ion-col>
+          <ion-col size="4"><strong>Status</strong></ion-col>
+        </ion-row>
+
+        <!-- Request rows with grey background -->
+        <ion-row
+          *ngFor="let request of requests"
+          class="request-row"
+          (click)="viewRequestDetails(request)"
+        >
+          <ion-col size="4">{{ request.title }}</ion-col>
+          <ion-col size="4">{{ request.date }}</ion-col>
+          <ion-col size="4">
+            <span *ngIf="request.accepted === true"> Accepted</span>
+            <span *ngIf="request.accepted === false"> Denied</span>
+            <span *ngIf="request.accepted === null">Pending</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="goToLogin()">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Notifications</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="activity" (click)="goToActivity()">
+      <ion-icon name="pulse-outline"></ion-icon>
+      <ion-label>Activity</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account" (click)="goToAccount()">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
