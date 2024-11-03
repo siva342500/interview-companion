@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-interview',
   templateUrl: './interview.page.html',
@@ -16,7 +16,11 @@ export class InterviewPage implements OnInit {
   expertsAcceptedIds: number[] = []; // Store unique expert IDs to be submitted
   statusMessage: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.fetchSkills();
@@ -145,6 +149,7 @@ export class InterviewPage implements OnInit {
       .subscribe(
         (response) => {
           this.statusMessage = 'Notification sent to matching experts';
+          this.router.navigate(['/available-companions']);
         },
         (error) => {
           console.error('Error sending notifications:', error);
@@ -176,7 +181,7 @@ export class InterviewPage implements OnInit {
       date: this.interviewDate,
       time: this.interviewTime,
       time_zone: this.time_zone,
-      experts_accepted:[ 1], // Convert to comma-separated string
+      experts_accepted: [1], // Convert to comma-separated string
       student_id: 1, // Default student ID
     };
 
@@ -187,6 +192,7 @@ export class InterviewPage implements OnInit {
       .subscribe(
         (response) => {
           this.statusMessage = 'Interview request created successfully';
+            this.router.navigate(['/available-companions']);
         },
         (error) => {
           console.error('Error submitting request:', error);
@@ -194,5 +200,4 @@ export class InterviewPage implements OnInit {
         }
       );
   }
-
 }

@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root',
 })
 export class PaymentService {
+  openRazorpay(order_id: string, amount: number) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
