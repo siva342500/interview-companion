@@ -23,8 +23,8 @@ export class PaymentMethodPage {
           key: 'rzp_test_c0ALHfuoiS0luD', // Razorpay test key
           amount: this.amount * 100, // Amount in paise
           currency: 'INR',
-          name: 'Your Company',
-          description: 'Test Payment',
+          name: 'ic',
+          // description: 'Test Payment',
           order_id: response.order_id, // Use the backend-provided order ID
           handler: (res: any) => {
             // Step 2: Call backend to store payment details after successful payment
@@ -41,12 +41,12 @@ export class PaymentMethodPage {
               );
           },
           prefill: {
-            name: 'John Doe', // Example name
-            email: 'john.doe@example.com', // Example email
-            contact: '9999999999', // Example contact number
+            name: 'Sivapriya', // Example name
+            email: 'sivapriya0909@gmail.com', // Example email
+            contact: '7997116117', // Example contact number
           },
           notes: {
-            address: 'Some address', // Optional note
+            // address: 'Some address', // Optional note
           },
           theme: {
             color: '#F37254', // Razorpay form color
